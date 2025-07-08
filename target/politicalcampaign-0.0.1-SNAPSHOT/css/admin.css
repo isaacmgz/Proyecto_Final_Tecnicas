@@ -1,0 +1,137 @@
+/* ================= BASE DE LA TABLA ================= */
+/* Estilos generales para la tabla de inscritos */
+table#tabla-inscritos {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-family: var(--font-stack, Arial, sans-serif);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ================= ENCABEZADOS ================= */
+/* Estilos para el encabezado de la tabla */
+table#tabla-inscritos thead {
+  background-color: var(--primary-color, #009639);
+  color: #fff;
+}
+table#tabla-inscritos thead th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* ================= FILAS ================= */
+/* Estilos para las filas del cuerpo de la tabla */
+table#tabla-inscritos tbody tr {
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+table#tabla-inscritos tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+table#tabla-inscritos tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* ================= CELDAS ================= */
+/* Estilos para las celdas del cuerpo de la tabla */
+table#tabla-inscritos tbody td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ================= BOTONES DE ACCIÓN ================= */
+/* Estilos para los botones dentro de la tabla */
+table#tabla-inscritos tbody button {
+  background-color: var(--secondary-color, #FFCC00);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+table#tabla-inscritos tbody button:hover {
+  background-color: #e6b800;
+}
+
+/* ================= RESPONSIVE ================= */
+/* Adaptación de la tabla para pantallas pequeñas */
+@media (max-width: 768px) {
+  table#tabla-inscritos,
+  table#tabla-inscritos thead,
+  table#tabla-inscritos tbody,
+  table#tabla-inscritos th,
+  table#tabla-inscritos td,
+  table#tabla-inscritos tr {
+    display: block;
+  }
+  table#tabla-inscritos thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  table#tabla-inscritos tr {
+    margin: 0 0 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  table#tabla-inscritos td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  /* Etiquetas para cada celda en móvil */
+  table#tabla-inscritos td:before {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    width: 45%;
+    padding-right: 0.5rem;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  table#tabla-inscritos td:nth-of-type(1):before { content: "Nombre"; }
+  table#tabla-inscritos td:nth-of-type(2):before { content: "Apellido"; }
+  table#tabla-inscritos td:nth-of-type(3):before { content: "Email"; }
+  table#tabla-inscritos td:nth-of-type(4):before { content: "Teléfono"; }
+  table#tabla-inscritos td:nth-of-type(5):before { content: "Departamento"; }
+  table#tabla-inscritos td:nth-of-type(6):before { content: "Ciudad"; }
+  table#tabla-inscritos td:nth-of-type(7):before { content: "Acciones"; }
+}
+
+/* ================= CONTROLES DE TABLA ================= */
+/* Barra de búsqueda y controles superiores */
+.table-controls {
+  margin-bottom: 1rem;
+  text-align: right;
+}
+.table-controls input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  width: 250px;
+}
+
+/* ================= PAGINACIÓN ================= */
+/* Estilos para la paginación de la tabla */
+.pagination {
+  margin-top: 1rem;
+  text-align: center;
+}
+.pagination button {
+  margin: 0 0.25rem;
+  padding: 0.4rem 0.75rem;
+  border: none;
+  background: var(--secondary-color, #FFCC00);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.pagination button.active {
+  background: var(--primary-color, #009639);
+  color: #fff;
+}

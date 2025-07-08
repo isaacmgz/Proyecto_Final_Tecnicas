@@ -1,0 +1,6 @@
+com/camp/politicalcampaign/controller/AdminVoluntario.class
+com/camp/politicalcampaign/model/VoluntarioDAO.class
+com/camp/politicalcampaign/PoliticalcampaignApplication.class
+com/camp/politicalcampaign/controller/ApiVoluntarioServlet.class
+com/camp/politicalcampaign/db/DB.class
+com/camp/politicalcampaign/model/Voluntario.class
