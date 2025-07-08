@@ -10,9 +10,9 @@
 
 1. Páginas HTML/JSP
 
-    - __`index.html`__: contiene la UI pública (hero, biografía, plataforma, noticias, eventos, “Involúcrate”) asociada al candidato.
+    - `index.html`: contiene la UI pública (hero, biografía, plataforma, noticias, eventos, “Involúcrate”) asociada al candidato.
 
-    - __`admin.jsp`__: la UI de administración, donde el servidor maneja la lista de voluntarios inscritos.
+    - `admin.jsp`: la UI de administración, donde el servidor maneja la lista de voluntarios inscritos.
   
 2. CSS y JS:
 
