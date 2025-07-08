@@ -27,16 +27,16 @@
 1. API JSON REST
    
    - `ApiVoluntarioServlet` (mapeado en `/api/inscritos/*`):
-     - `doGet` → serializa la lista completa (dao.listarTodos()) como JSON.
-     - `doPost` → deserializa JSON a Voluntario y llama a dao.agregar(v)
-     - `doPut` → lee el id de la URL y el body JSON, actualiza con dao.actualizar(v).
-     - `doDelete` → borra el voluntario con dao.eliminar(id).
+     - `doGet`: serializa la lista completa (dao.listarTodos()) como JSON.
+     - `doPost`: deserializa JSON a Voluntario y llama a dao.agregar(v)
+     - `doPut`: lee el id de la URL y el body JSON, actualiza con dao.actualizar(v).
+     - `doDelete`: borra el voluntario con dao.eliminar(id).
 
 2. Panel JSP de Administración
 
    - AdminVoluntario (mapeado en /admin/voluntarios):
-     - `doGet` → obtiene List<Voluntario> lista = dao.listarTodos() y la inyecta en el request como atributo "voluntarios", luego hace forward("/WEB-INF/views/admin.jsp").
-     - `doPost` → lee los campos del formulario, construye un Voluntario, lo inserta con dao.agregar(v), vuelve a recargar la lista y reenvía a la misma JSP con un mensaje de éxito.
+     - `doGet`: obtiene List<Voluntario> lista = dao.listarTodos() y la inyecta en el request como atributo "voluntarios", luego hace forward("/WEB-INF/views/admin.jsp").
+     - `doPost`: lee los campos del formulario, construye un Voluntario, lo inserta con dao.agregar(v), vuelve a recargar la lista y reenvía a la misma JSP con un mensaje de éxito.
 
 **$III.$ _Capa de datos (DAO y Base de Datos)_**
 
